@@ -1,31 +1,23 @@
-== README
+###messagesテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Left align | Right align | Center align |
+|:-----------|------------:|:------------:|
+| This       |        This |     This     |
+| column     |      column |    column    |
+| will       |        will |     will     |
+| be         |          be |      be      |
+| left       |       right |    center    |
+| aligned    |     aligned |   aligned    |
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###usersテーブル
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
 
-データベース設計
+
+
+###groupsテーブル
+
+
+
+
 

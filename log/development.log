@@ -5429,3 +5429,180 @@ Processing by ChatsController#index as HTML
 Completed 200 OK in 136ms (Views: 122.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-03-10 21:00:43 +0900
+Processing by ChatsController#index as HTML
+  Rendering chats/index.html.haml within layouts/application
+  Rendered chats/index.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 798ms (Views: 784.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-10 21:47:57 +0900
+Processing by ChatsController#index as HTML
+  Rendering chats/index.html.haml within layouts/application
+  Rendered chats/index.html.haml within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 361ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""):
+    3:   %head
+    4:     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    5:     %title ChatSpace
+    6:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    7:     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    8:     = csrf_meta_tags
+    9:   %body
+  
+app/assets/stylesheets/application.scss:154
+app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml__2171166711003272363_70115337013900'
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (122.7ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_yagyumasahiro__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___2711499044530650184_70115336370280 at /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (111.7ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (229.5ms)
+Started GET "/" for ::1 at 2017-03-10 21:49:04 +0900
+Processing by ChatsController#index as HTML
+  Rendering chats/index.html.haml within layouts/application
+  Rendered chats/index.html.haml within layouts/application (51.5ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "}": expected selector or at-rule, was "}"):
+    3:   %head
+    4:     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    5:     %title ChatSpace
+    6:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    7:     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    8:     = csrf_meta_tags
+    9:   %body
+  
+app/assets/stylesheets/application.scss:54
+app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml__2171166711003272363_70115313537340'
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (102.3ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_yagyumasahiro__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___2711499044530650184_70115305847860 at /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (81.6ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (194.3ms)
+Started GET "/" for ::1 at 2017-03-10 21:49:28 +0900
+Processing by ChatsController#index as HTML
+  Rendering chats/index.html.haml within layouts/application
+  Rendered chats/index.html.haml within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""):
+    3:   %head
+    4:     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    5:     %title ChatSpace
+    6:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    7:     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    8:     = csrf_meta_tags
+    9:   %body
+  
+app/assets/stylesheets/application.scss:163
+app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml__2171166711003272363_70115304500980'
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (107.2ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_yagyumasahiro__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___2711499044530650184_70115354593220 at /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (80.4ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/yagyumasahiro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (179.2ms)
+Started GET "/" for ::1 at 2017-03-10 21:50:06 +0900
+Processing by ChatsController#index as HTML
+  Rendering chats/index.html.haml within layouts/application
+  Rendered chats/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 610ms (Views: 607.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-10 21:52:02 +0900
+Processing by ChatsController#index as HTML
+  Rendering chats/index.html.haml within layouts/application
+  Rendered chats/index.html.haml within layouts/application (29.1ms)
+Completed 200 OK in 94ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-10 21:56:53 +0900
+Processing by ChatsController#index as HTML
+  Rendering chats/index.html.haml within layouts/application
+  Rendered chats/index.html.haml within layouts/application (35.1ms)
+Completed 200 OK in 883ms (Views: 875.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 12:35:31 +0900
+Processing by ChatsController#index as HTML
+  Rendering chats/index.html.haml within layouts/application
+Started GET "/" for ::1 at 2017-03-12 12:35:32 +0900
+  Rendered chats/index.html.haml within layouts/application (28.3ms)
+Processing by ChatsController#index as HTML
+  Rendering chats/index.html.haml within layouts/application
+  Rendered chats/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 519ms (Views: 515.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1130ms (Views: 1068.3ms | ActiveRecord: 0.0ms)
+
+

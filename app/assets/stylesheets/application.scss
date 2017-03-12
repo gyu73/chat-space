@@ -14,130 +14,149 @@ html{
 }
 
 .contents{
-		  height:100%;
-		  width:100%;
-		  @include clearfix();
-	&__left{
-			width:300px;
-			height:100%;
-			float:left;
-			background-color:red;
-		&__in{
-			  height:100%;
-			  width:260px;
-			  margin:0 auto;
-			  background-color:#2f3151;
-			&__top{
-				  height:100px;
-				  width:100%;
-				  margin-bottom:20px;
-				  background-color:#253141;
-				&__user{
-						width:100px;
-						float:left;
-						line-height:100px;
-				}
-				p{
-						float:right;
-						text-align:right;
-						line-height:100px;
-				}
-			}
-			&__bottom{
-					  min-height:500px;
-					  width:100%;
-					  background-color:#2f3151;
-				&__group{
-						 margin-bottom:40px;
-						 width:100%;
-					&__name{
-							margin-bottom:5px;
-							}
-					&__message{
-					}
-				}
-				}
-				}
-				}
-				&__right{
-					  background-color:green;
-					  float:left;
-					  width:900px;
-					  height:100%;
-					  @include clearfix();
-			  			&__in{
-			  				background-color:#AAAAAA;
-			 			 	height:100%;
-						  	width:800px;
-						  	margin:0 auto;
-				  		&__top{
-				  			background-color:white;
-				  			@include clearfix();
-			  				height:100px;
-			  				width:100%;
-			  				&__group{
-			  					float:left;
-			  					height:100%;
-			  					width:300px;
-			  						&__name{
-			  							padding-top:35px;
-			  							padding-bottom:15px;
-			  						}
-			  						&__member{
+	height:100%;
+	width:100%;
+	@include clearfix();
+}
 
-			  						}
-			  					}
-			  				&__edit{
-			  					float:right;
-			  					line-height:40px;
-			  					padding:0px 20px;
-			  					margin-top:28px;
-			  				}
-			  				}
-			  		&__center{
-			  			background-color:#AAAAAA;
-			  			height:400px;
-			  			width:100%;
-			  				  &__message{
-			  				  			  width:100%;
-			  				  			  margin-top:40px;
-			  				  			  &__name{
-			  				  			  	margin-bottom:10px;
-			  				  			  	margin-right:10px;
-			  				  			  	float:left;
-			  				  			  }
-			  				  			  &__date{
-			  				  			  	float:left;
-			  				  			  	font-size:12px;
-			  				  			  }
-			  				  			  &__text{
-			  				  			    clear:left;
-			  				  			  	font-size:14px;
-			  				  			  	color:#434A54;
-			  				  			  }
-			  				  			}
-			  				  }
-			  		&__bottom{
-			  				  background-color:yellow;
-			  				  padding-top:20px;
-			  				  height:100px;
-			  				  width:100%;
-			  				  &__input{
-			  				  			background-color:white;
-			  				  			margin:0 10px 0 20px;
-			  				  			float:left;
-			  				  			height:50px;
-			  				  			width:700px;
-			  				  			line-height:50px;
-			  				  }
-			  				  &__send{
-			  				  			line-height:50px;
-			  				  			height:50px;
-			  				  			background-color:#38AEF0;
-			  				  			float:left;
-			  				  			margin-left:15px;
-			  				  }
-			  				}
-			  			}
-					}
-				}
+.contents__left{
+	min-width:300px;
+	height:100%;
+	float:left;
+	background-color:red;
+}
+
+.contents__left__in{
+	height:100%;
+	min-width:260px;
+	margin:0 auto;
+	background-color:#2f3151;
+}
+
+.contents__left__in__top{
+	height:100px;
+	width:100%;
+	margin-bottom:20px;
+	background-color:#253141;
+
+	&__user{
+	width:100px;
+	float:left;
+	line-height:100px;
+}
+	p{
+	float:right;
+	text-align:right;
+	line-height:100px;
+}
+}
+
+.contents__left__in__bottom{
+	min-height:500px;
+	width:100%;
+	background-color:#2f3151;
+}
+
+.contents__left__in__bottom__group{
+	margin-bottom:40px;
+	width:100%;
+
+	&__name{
+	margin-bottom:5px;
+}
+
+	&__message{
+}
+}
+
+.contents__right{
+	background-color:green;
+	float:left;
+	min-width:980px;
+	height:100%;
+	@include clearfix();
+}
+
+.contents__right__in{
+	background-color:#AAAAAA;
+	height:100%;
+	width:800px;
+	margin:0 auto;
+}
+
+.contents__right__in__top{
+	background-color:white;
+	@include clearfix();
+	height:100px;
+	width:100%;
+}
+
+.contents__right__in__top__group{
+	float:left;
+	height:100%;
+	width:300px;
+
+	&__name{
+	padding-top:35px;
+	padding-bottom:15px;
+}
+
+	&__member{
+}
+}
+.contents__right__in__top__edit{
+	float:right;
+	line-height:40px;
+	padding:0px 20px;
+	margin-top:28px;
+}
+.contents__right__in__center{
+	background-color:#AAAAAA;
+	height:400px;
+	width:100%;
+}
+
+.contetns__right__in__center__message{
+	width:100%;
+	margin-top:40px;
+
+	&__name{
+	margin-bottom:10px;
+	margin-right:10px;
+	float:left;
+}
+
+	&__date{
+	float:left;
+	font-size:12px;
+}
+
+	&__text{
+	clear:left;
+	font-size:14px;
+	color:#434A54;
+}
+}
+.contents__right__in__bottom{
+	background-color:yellow;
+	padding-top:20px;
+	height:100px;
+	width:100%;
+
+	&__input{
+	background-color:white;
+	margin:0 10px 0 20px;
+	float:left;
+	height:50px;
+	width:700px;
+	line-height:50px;
+}
+
+	&__send{
+	line-height:50px;
+	height:50px;
+	background-color:#38AEF0;
+	float:left;
+	margin-left:15px;
+}
+}

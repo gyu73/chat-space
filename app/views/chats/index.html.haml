@@ -3,6 +3,8 @@
 	%dinv{class: 'contents__left'}
 		%div{class: 'contents__left__top'}
 			%h3{class: 'contents__left__top__user'} ユーザー名
+			/ = link_to "ログアウト", destroy_user_session_path, method: :delete , class: :contents__left__top__user
+			= link_to "", edit_chat_path(current_user.id) , class: "contents__left__top__user fa fa-cog"
 			%p{class: "fa fa-pencil-square-o"}
 			%p{class: "fa fa-cog"}
 		%div{class: 'contents__left__bottom'}

@@ -1,53 +1,55 @@
 
-###messagesテーブル
+### messagesテーブル
 
-| column | type|
+| column  | type |
 |:-----------|------------:|
-| body | text |
+| content  | string |
 | image | text |
 | user_id  | integer |
-| group_id |  integer |
+| group_id|  integer |
 
-###usersテーブル
+### usersテーブル
 
-| column | type|
+| column | type |
 |:-----------|------------:|
-| nickname | text |
-| e-mail | text |
+| nickname | string |
+| email | string |
 
-###groupsテーブル
+### groupsテーブル
 
-| column | type|
+| column | type |
 |:-----------|------------:|
-| group_name | text |
+| name | string |
 
 ### users_groupsテーブル
 
-| column | type|
+| column | type |
 |:-----------|------------:|
 | user_id  | integer |
 | group_id |  integer |
-| nickname | text |
-| e-mail | text |
-| group_name | text |
+| nickname | string |
+| e-mail | string |
+| name | string |
 
 
-          class Message < ActiveRecord::Base
+  class Message < ActiveRecord::Base
 
-          belongs_to : user
-          belongs_to : group
+    belongs_to : user
+    belongs_to : group
 
-          end
+  end
 
-          class User < ActiveRecord::Base
+  class User < ActiveRecord::Base
 
-          has_many : users_groups
-          has_many : groups , through: :users_groups
-          end
+    has_many : messages
+    has_many : users_groups
+    has_many : groups , through: :users_groups
+  end
 
-          class Group < ActiveRecord::Base
+  class Group < ActiveRecord::Base
 
-          has_many : users_groups
-          has_many : users , through: :users_groups
+    has_many : :messages
+    has_many : users_groups
+    has_many : users , through: :users_groups
 
-          end
+  end

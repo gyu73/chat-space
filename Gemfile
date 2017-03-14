@@ -47,6 +47,7 @@ group :development do
   gem 'erb2haml'
   gem 'font-awesome-sass'
   gem 'devise'
+  gem 'i18n'
 
 
 end

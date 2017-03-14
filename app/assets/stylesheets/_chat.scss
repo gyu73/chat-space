@@ -77,8 +77,8 @@ html{
 .contents__right{
   background-color:$w-color;
   float:left;
-  width: -webkit-calc(100% - 320px);
-  width: calc(100% - 320px);
+  width: -webkit-calc(100% - 300px);
+  width: calc(100% - 300px);
   height:100%;
   @include clearfix();
 }
@@ -118,7 +118,7 @@ html{
 }
 
 .contents__right__center{
-  background-color:#AAAAAA;
+  background-color:#f0f0f0;
   height: -webkit-calc(100% - 212px);
   height: calc(100% - 212px);
   padding:0 40px;
@@ -151,7 +151,7 @@ html{
 }
 
 .contents__right__bottom{
-  background-color:gray;
+  background-color:#cccccc;
   padding:20px 40px 20px 40px;
   @include clearfix();
 

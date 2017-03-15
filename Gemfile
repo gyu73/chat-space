@@ -37,6 +37,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', "~> 3.5.0.beta"
   gem 'factory_girl_rails', "~> 4.4.1"
+  gem 'faker'
   gem 'haml-rails'
   gem 'erb2haml'
   gem 'font-awesome-sass'

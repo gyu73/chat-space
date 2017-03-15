@@ -6472,3 +6472,4 @@ Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
 
 
   [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'kkk@gmail.com' LIMIT 1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'kkk@gmail.com' LIMIT 1[0m

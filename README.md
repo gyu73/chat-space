@@ -1,5 +1,13 @@
 
-### messagesテーブル
+## messages : チャットの内容保存
+## users : ユーザー情報の保存
+## chat_groups : チャットグループの保存
+## users_chat_groups : usersとchat_groupsの中間テーブル
+
+
+
+
+# messagesテーブル
 
 | column  | type |
 |:-----------|------------:|
@@ -8,20 +16,20 @@
 | user_id  | integer |
 | group_id|  integer |
 
-### usersテーブル
+# usersテーブル
 
 | column | type |
 |:-----------|------------:|
 | nickname | string |
 | email | string |
 
-### chat_groupsテーブル
+# chat_groupsテーブル
 
 | column | type |
 |:-----------|------------:|
 | name | string |
 
-### users_chat_groupsテーブル(中間テーブルイメージ)
+# users_chat_groupsテーブル(中間テーブルイメージ)
 
 | column | type |
 |:-----------|------------:|

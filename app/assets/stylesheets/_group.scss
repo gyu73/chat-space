@@ -42,6 +42,7 @@
 
   .chat-group-form__field {
     margin-top: 30px;
+    @include clearfix();
 
     .chat-group-form__field--left {
       float: left;

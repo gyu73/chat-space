@@ -43,6 +43,7 @@ group :development, :test do
   gem 'font-awesome-sass'
   gem 'devise'
   gem 'i18n'
+  gem 'nested_form'
 
 end
 

@@ -4,10 +4,12 @@ class ChatGroupsController < ApplicationController
 
   def new
     @group = ChatGroup.new
+    binding.pry
   end
 
   def create
-    ChatGroup.create(create_params)
+    chat_group = ChatGroup.create(create_params)
+    binding.pry
     redirect_to action: :index
   end
 
@@ -16,6 +18,6 @@ class ChatGroupsController < ApplicationController
 
   private
     def create_params
-      params.require(:chat_group).permit(:name)
+      params.require(:chat_group).permit(:name,:user_ids)
     end
   end

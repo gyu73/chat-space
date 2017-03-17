@@ -11,15 +11,16 @@
       .chat-group-form__field--left
         = f.label :チャットメンバーを追加, class: 'chat-group-form__label'
       .chat-group-form__field--right
-        = f.text_area :name, placeholder: ' 追加したいユーザーを入力してください。',class: ' chat-group-form__input'
+        = collection_check_boxes(:post, :author_ids, User.all, :id, :nickname) do |b|
+          = b.label { b.check_box + b.text }
     .chat-group-form__field
       .chat-group-form__field--left
         = f.label :チャットメンバー , class: 'chat-group-form__label'
       .chat-group-form__field--right
         #chat-group-users
           .chat-group-user#chat-group-user-22
-            %p{class: 'chat-group-user__name' }seo_kyohei マイケル この記述の上に/<input  name = 'chat-group[user_ids][]" type = "hidden"' value = "22">
+            %p{class: 'chat-group-user__name' }seo_kyohei マイケル
     .chat-group-form__field
       .chat-group-form__field--left
       .chat-group-form__field--right
-        = button_tag type: "submit", class: "chat-group-form__action-btn"
+        = f.button value: "SAVE", type: "submit", class: "chat-group-form__action-btn"

@@ -17,10 +17,9 @@
         = f.label :チャットメンバー , class: 'chat-group-form__label'
       .chat-group-form__field--right
         #chat-group-users
-          .chat-group-user.clearfix#chat-group-user-22
-            = f.text_area :name, placeholder: 'グループ名を入力してください。',class: ' chat-group-form__input'
-            %p{class: 'chat-group-user__name' }seo_kyohei
-    .chat-group-form__field.clearfix
+          .chat-group-user#chat-group-user-22
+            %p{class: 'chat-group-user__name' }seo_kyohei マイケル この記述の上に/<input  name = 'chat-group[user_ids][]" type = "hidden"' value = "22">
+    .chat-group-form__field
       .chat-group-form__field--left
       .chat-group-form__field--right
-        = button_tag class: 'chat-group-form__action-btn'
+        = button_tag type: "submit", class: "chat-group-form__action-btn"

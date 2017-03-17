@@ -78,6 +78,7 @@
     line-height: 50px;
     font-size: 14px;
     border-bottom: 1px solid #ddd;
+    @include clearfix();
 
     .chat-group-user__name {
       float: left;

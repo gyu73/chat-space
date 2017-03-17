@@ -9,6 +9,6 @@ class User < ApplicationRecord
   validates :email, presence: true
 
   has_many :messages
-  has_many :users_chat_groups
-  has_many :chat_groups , through: :users_chat_groups
+  has_many :user_chat_groups
+  has_many :chat_groups , through: :user_chat_groups
 end

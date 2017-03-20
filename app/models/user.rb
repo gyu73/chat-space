@@ -5,8 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :nickname, presence: true, length: { maximum: 6 }
-  # validates :password, presence: true, length: { minimum: 6 }
-  # validates :email, presence: true
 
   has_many :messages
   has_many :user_chat_groups

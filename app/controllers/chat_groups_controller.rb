@@ -7,8 +7,9 @@ class ChatGroupsController < ApplicationController
   end
 
   def create
-    chat_group = ChatGroup.create(chat_group_params)
-    add_user_id_to_relation_table(chat_group)
+    ChatGroup.create(chat_group_params)
+    binding.pry
+    # add_user_id_to_relation_table(chat_group)
     redirect_to action: :index
   end
 
@@ -17,20 +18,15 @@ class ChatGroupsController < ApplicationController
 
   private
     def chat_group_params
-      params.require(:chat_group).permit(:name)
+      params.require(:chat_group).permit(:name , user_ids: [])
     end
-
-    def users_params
-      params.require(:users_attributes)
-  end
 
   def add_user_id_to_relation_table(chat_group)
      x = 1
     next_while = true
     while next_while do
-        if x <= users_params[:user_ids].count-1
-          users = User.find(users_params[:user_ids][x])
-           binding.pry
+        if x <= chat_group_params[:user_ids].count-1
+          users = User.find(chat_group_params[:user_ids][x])
           chat_group.users << users
           x = x + 1
         else

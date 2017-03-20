@@ -11,7 +11,7 @@
       .chat-group-form__field--left
         = f.label :チャットメンバーを追加, class: 'chat-group-form__label'
       .chat-group-form__field--right
-        = collection_check_boxes(:users_attributes, :user_ids, User.all, :id, :nickname) do |b|
+        = f.collection_check_boxes(:user_ids, User.all, :id, :nickname) do |b|
           = b.label { b.check_box + b.text }
     .chat-group-form__field
       .chat-group-form__field--left
@@ -23,4 +23,4 @@
     .chat-group-form__field
       .chat-group-form__field--left
       .chat-group-form__field--right
-        = f.button value: "SAVE", type: "submit", class: "chat-group-form__action-btn"
+        = f.submit "SAVE", class: "chat-group-form__action-btn"

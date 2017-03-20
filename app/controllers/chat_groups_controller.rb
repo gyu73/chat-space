@@ -1,5 +1,6 @@
 class ChatGroupsController < ApplicationController
   def index
+    @group = ChatGroup.find(1)
   end
 
   def new
@@ -7,13 +8,19 @@ class ChatGroupsController < ApplicationController
   end
 
   def create
-    ChatGroup.create(chat_group_params)
-    binding.pry
+    @group = ChatGroup.create(chat_group_params)
     # add_user_id_to_relation_table(chat_group)
-    redirect_to action: :index
+    redirect_to chat_group_messages_path(@group.id)
   end
 
   def edit
+    @group = ChatGroup.find(params[:id])
+  end
+
+  def update
+    current_group = ChatGroup.find(params[:id])
+    current_group.update(chat_group_params)
+    redirect_to chat_group_messages_path(current_group.id)
   end
 
   private

@@ -1,0 +1,30 @@
+%div{class: 'contents'}
+  %dinv{class: 'contents__left'}
+    %div{class: 'contents__left__top'}
+      %h3{class: 'contents__left__top__user'} #{current_user.nickname}
+      %p
+        = link_to "", edit_user_registration_path , class: "fa fa-cog"
+        = link_to "", new_chat_group_path , class: "fa fa-pencil-square-o"
+    %div{class: 'contents__left__bottom'}
+      -@current_user_groups.each do |group|
+        %div{class: 'contents__left__bottom__group'}
+          %h3{class: 'contents__left__bottom__group__name'} #{group.name}
+          %p{class: 'contents__left__bottom__group__message'}
+            -group.users.each do |member|
+              #{member.nickname}
+  %div{class: 'contents__right'}
+    %div{class: 'contents__right__top'}
+      %div{class: 'contents__right__top__group'}
+        %h3{class: 'contents__right__top__group__name'} #{@current_group.name}
+        %p{class: 'contents__right__top__group__member'}
+          -@current_group_members.each do |member|
+            #{member.nickname}
+      = link_to "EDIT", edit_chat_group_path(@current_group.id) , class: 'contents__right__top__edit'
+    %div{class: 'contents__right__center'}
+      %div{class: 'contents__right__center__message'}
+        %h3{class: 'contents__right__center__message__name'}メッセージ送信者名前
+        %h3{class: 'contents__right__center__message__date'}日付
+        %h3{class: 'contents__right__center__message__text'}メッセージ内容
+    %div{class: 'contents__right__bottom'}
+      %div{class: 'contents__right__bottom__input'}type a message
+      %h3{class: 'contents__right__bottom__send'}SEND

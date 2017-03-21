@@ -1,6 +1,5 @@
 class ChatGroupsController < ApplicationController
   def index
-    @group = ChatGroup.find(1)
   end
 
   def new
@@ -25,7 +24,7 @@ class ChatGroupsController < ApplicationController
     if current_group.update(chat_group_params)
       redirect_to chat_group_messages_url(current_group), notice: 'グループを編集しました。'
     else
-      redirect_go edit_chat_group_url(current_group), alert: 'グループ編集に失敗しました。'
+      redirect_to edit_chat_group_url(current_group), alert: 'グループ編集に失敗しました。'
     end
   end
 

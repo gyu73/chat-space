@@ -2,5 +2,4 @@
   %h3.contents__left__bottom__group__name
     = group.name
   %p.contents__left__bottom__group__message
-    - group.users.each do |member|
-      = member.nickname
+    = render partial: :user, collection: group.users, as: :member

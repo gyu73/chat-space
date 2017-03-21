@@ -9,10 +9,12 @@ class ChatGroupsController < ApplicationController
 
   def create
     group = ChatGroup.new(chat_group_params)
-    group.save
-    # add_user_id_to_relation_table(chat_group)
-    redirect_to chat_group_messages_path(group)
-    binding.pry
+    if group.save
+      group.save
+      redirect_to chat_group_messages_path(group)
+    else
+      redirect_to new_chat_group
+    end
   end
 
   def edit
@@ -33,19 +35,4 @@ class ChatGroupsController < ApplicationController
     def get_params_id
     ChatGroup.find(params[:id])
     end
-
-  # def add_user_id_to_relation_table(chat_group)
-  #    x = 1
-  #   next_while = true
-  #   while next_while do
-  #       if x <= chat_group_params[:user_ids].count-1
-  #         users = User.find(chat_group_params[:user_ids][x])
-  #         chat_group.users << users
-  #         x = x + 1
-  #       else
-  #         next_while = false
-  #       end
-  #   end
-  # end
-
 end

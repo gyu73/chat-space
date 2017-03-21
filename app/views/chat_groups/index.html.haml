@@ -1,7 +1,8 @@
 .contents
   .contents__left
     .contents__left__top
-      %h3.contents__left__top__user = current_user.nickname
+      %h3.contents__left__top__user
+        = current_user.nickname
       %p
         = link_to '', edit_user_registration_path , class: 'fa fa-cog'
         = link_to '', new_chat_group_path , class: 'fa fa-pencil-square-o'

@@ -10,10 +10,9 @@ class ChatGroupsController < ApplicationController
   def create
     group = ChatGroup.new(chat_group_params)
     if group.save
-      group.save
-      redirect_to chat_group_messages_path(group)
+      redirect_to chat_group_messages_url(group), notice: '新しいグループが作成されました'
     else
-      redirect_to new_chat_group
+      redirect_to new_chat_group_url, alert: 'グループ作成に失敗しました。'
     end
   end
 
@@ -23,8 +22,11 @@ class ChatGroupsController < ApplicationController
 
   def update
     current_group = get_params_id
-    current_group.update(chat_group_params)
-    redirect_to chat_group_messages_path(current_group.id)
+    if current_group.update(chat_group_params)
+      redirect_to chat_group_messages_url(current_group), notice: 'グループを編集しました。'
+    else
+      redirect_go edit_chat_group_url(current_group), alert: 'グループ編集に失敗しました。'
+    end
   end
 
   private

@@ -1,14 +1,14 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{ :content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
     %title ChatSpace
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     -if notice
-      %p{class: "alert-notice"}= notice
+      %p{ class: "alert-notice" } = notice
     -if alert
-      %p{class: "alert-error"} = alert
+      %p{ class: "alert-error" } = alert
     = yield

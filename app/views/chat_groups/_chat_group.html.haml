@@ -1,5 +1,6 @@
-%div{ class: 'contents__left__bottom__group' }
-  %h3{ class: 'contents__left__bottom__group__name' } #{ group.name }
-  %p{ class: 'contents__left__bottom__group__message' }
+.contents__left__bottom__group
+  %h3.contents__left__bottom__group__name
+    = group.name
+  %p.contents__left__bottom__group__message
     - group.users.each do |member|
-      #{ member.nickname }
+      = member.nickname

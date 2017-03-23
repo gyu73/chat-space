@@ -15,7 +15,7 @@
           = @current_group.name
         %p.contents__right__top__group__member
           = render partial: :user, collection: @current_group_members, as: :member
-      = link_to 'EDIT', edit_chat_group_path(@current_group.id) , class: 'contents__right__top__edit'
+      = link_to 'EDIT', edit_chat_group_path(@current_group) , class: 'contents__right__top__edit'
     .contents__right__center
       .contents__right__center__message
         %h3.contents__right__center__message__name メッセージ送信者名前

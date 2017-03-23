@@ -53,8 +53,13 @@
     }
 
     .chat-group-form__field--right {
-      float: right;
+      float: left;
       width: 70%;
+    }
+
+    .form__require{
+      float:left;
+      line-height:80px;
     }
 
     .chat-group-form__label {
@@ -66,7 +71,7 @@
 
     .chat-group-form__input {
       float: left;
-      width: 100%;
+      width: 80%;
       line-height: 30px;
       padding: 10px 15px;
       box-sizing: border-box;

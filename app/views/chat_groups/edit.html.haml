@@ -6,7 +6,8 @@
       .chat-group-form__field--left
         = f.label :グループ名, class: 'chat-group-form__label', for: 'chat_group_name'
       .chat-group-form__field--right
-        = f.text_area :name, placeholder: 'グループ名を入力してください。', class: ' chat-group-form__input'
+        = f.text_area :name, placeholder: 'グループ名を入力してください。', class: ' chat-group-form__input', required: true
+        %p.form__require  ❇︎入力必須
     .chat-group-form__field
       .chat-group-form__field--left
         = f.label :チャットメンバーを追加, class: 'chat-group-form__label'

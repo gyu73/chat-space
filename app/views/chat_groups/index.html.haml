@@ -7,20 +7,4 @@
         = link_to '', edit_user_registration_path , class: 'fa fa-cog'
         = link_to '', new_chat_group_path , class: 'fa fa-pencil-square-o'
     .contents__left__bottom
-      .contents__left__bottom__group
-        %h3.contents__left__bottom__group__name
-        %p.contents__left__bottom__group__message Chatspace
-  .contents__right
-    .contents__right__top
-      .contents__right__top__group
-        %h3.contents__right__top__group__name
-        %p.contents__right__top__group__member Tech::太郎、Tech::次郎
-      = link_to 'EDIT', edit_chat_group_path(1), class: 'contents__right__top__edit'
-    .contents__right__center
-      .contents__right__center__message
-        %h3.contents__right__center__message__nameTech::太郎
-        %h3.contents__right__center__message__date 2017/12/12
-        %h3.contents__right__center__message__text Chatspace楽しい
-    .contents__right__bottom
-      .contents__right__bottom__input type a message
-      %h3.contents__right__bottom__sendSEND
+      = render partial: :chat_group, collection: @current_user_groups, as: :group

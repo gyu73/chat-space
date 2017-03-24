@@ -11,9 +11,9 @@ class MessagesController < ApplicationController
     message = Message.new(content: message_params[:content], user_id: current_user.id, chat_group_id: chat_group_params[:chat_group_id])
     group = ChatGroup.new(id: chat_group_params[:chat_group_id])
     if message.save
-      redirect_to chat_group_messages_url(group), notice: 'メッセージを送信しました'
+      redirect_to chat_group_messages_url(group), notice: 'メッセージを送信しました(あなたの思いが伝わりますように。)'
     else
-      redirect_to chat_group_messages_url(group), alert: 'メッセージの送信に失敗しました。'
+      redirect_to chat_group_messages_url(group), alert: 'メッセージの送信に失敗しました。(メッセージは225文字以下でお願いします。)'
     end
   end
 end

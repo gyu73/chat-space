@@ -8,12 +8,12 @@ class MessagesController < ApplicationController
   end
 
   def create
-    message = Message.new(content: message_params[:content], user_id: current_user.id, chat_group_id: chat_group_params[:chat_group_id])
-    group = ChatGroup.new(id: chat_group_params[:chat_group_id])
+    binding.pry
+    message = Message.new(message_params)
     if message.save
-      redirect_to chat_group_messages_url(group), notice: 'メッセージを送信しました(あなたの思いが伝わりますように。)'
+      redirect_to chat_group_messages_url(chat_group_params[:chat_group_id]), notice: 'メッセージを送信しました(あなたの思いが伝わりますように。)'
     else
-      redirect_to chat_group_messages_url(group), alert: 'メッセージの送信に失敗しました。(メッセージは225文字以下でお願いします。)'
+      redirect_to chat_group_messages_url(chat_group_params[:chat_group_id]), alert: 'メッセージの送信に失敗しました。(メッセージは225文字以下でお願いします。)'
     end
   end
 end
@@ -21,7 +21,7 @@ end
 private
 
 def message_params
-  params.require(:message).permit(:content)
+  params.require(:message).permit(:content).merge(user_id: current_user.id, chat_group_id: chat_group_params[:chat_group_id])
 end
 
 def chat_group_params

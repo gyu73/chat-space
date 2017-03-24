@@ -17,12 +17,8 @@
           = render partial: :user, collection: @current_group_members, as: :member
       = link_to 'EDIT', edit_chat_group_path(@current_group) , class: 'contents__right__top__edit'
     .contents__right__center
-      .contents__right__center__message
-        %h3.contents__right__center__message__name メッセージ送信者名前
-        %h3.contents__right__center__message__date 日付
-        %h3.contents__right__center__message__text メッセージ内容
+      = render partial: :message, collection: @messages, as: :message
     .contents__right__bottom
-
-      = form_for [@current_group, @message], html: { class: 'contents__right__bottom__form' } do |f|
+      = form_for [@current_group, @new_message], html: { class: 'contents__right__bottom__form' } do |f|
         = f.text_area :content, placeholder: 'type a message', class: '  contents__right__bottom__form__input', required: true
         = f.submit 'SEND', class: 'contents__right__bottom__form__send'

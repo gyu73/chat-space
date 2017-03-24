@@ -163,7 +163,17 @@ html{
   width: calc(100% - 100px);
   line-height: 50px;
   font-size: 16px;
-  color: #434A54;
+
+    &__message{
+      width: 20%;
+      float: left;
+      padding: 0 0 0 10px;
+      color: #434A54;
+    }
+    &__image{
+      width: 20px;
+      float: right;
+    }
 }
 
   &__send{

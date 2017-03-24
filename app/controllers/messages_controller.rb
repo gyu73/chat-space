@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    message = Message.new(message_params)
+    message = current_user.messages.new(message_params)
     if message.save
       redirect_to chat_group_messages_url(message.chat_group_id), notice: 'メッセージを送信しました(あなたの思いが伝わりますように。)'
     else
@@ -20,5 +20,5 @@ end
 private
 
 def message_params
-  params.require(:message).permit(:content, :chat_group_id).merge(user_id: current_user.id)
+  params.require(:message).permit(:content, :chat_group_id)
 end

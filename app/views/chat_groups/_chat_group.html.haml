@@ -1,0 +1,5 @@
+.contents__left__bottom__group
+  %h3.contents__left__bottom__group__name
+    = group.name
+  %p.contents__left__bottom__group__message
+    = render partial: :user, collection: group.users, as: :member

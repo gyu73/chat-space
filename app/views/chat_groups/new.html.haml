@@ -1,12 +1,13 @@
 .chat-group-form
   %h1 新規チャットグループ
   .new_chat_group
-  = form_for @group, html: {class: 'new_chat_group'} do |f|
+  = form_for @group, html: { class: 'new_chat_group' } do |f|
     .chat-group-form__field
       .chat-group-form__field--left
-        = f.label :グループ名 , class: 'chat-group-form__label',for: 'chat_group_name'
+        = f.label :グループ名, class: 'chat-group-form__label', for: 'chat_group_name'
       .chat-group-form__field--right
-        = f.text_area :name, placeholder: 'グループ名を入力してください。',class: ' chat-group-form__input'
+        = f.text_area :name, placeholder: 'グループ名を入力してください。', class: ' chat-group-form__input', required: true
+        %p.form__require  ❇︎入力必須
     .chat-group-form__field
       .chat-group-form__field--left
         = f.label :チャットメンバーを追加, class: 'chat-group-form__label'
@@ -15,12 +16,12 @@
           = b.label { b.check_box + b.text }
     .chat-group-form__field
       .chat-group-form__field--left
-        = f.label :チャットメンバー , class: 'chat-group-form__label'
+        = f.label :チャットメンバー, class: 'chat-group-form__label'
       .chat-group-form__field--right
         #chat-group-users
           .chat-group-user#chat-group-user-22
-            %p{class: 'chat-group-user__name' }seo_kyohei マイケル
+            %p.chat-group-user__name seo_kyohei マイケル
     .chat-group-form__field
       .chat-group-form__field--left
       .chat-group-form__field--right
-        = f.submit "SAVE", class: "chat-group-form__action-btn"
+        = f.submit 'SAVE', class: 'chat-group-form__action-btn'

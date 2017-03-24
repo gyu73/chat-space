@@ -1,5 +1,6 @@
 class ChatGroupsController < ApplicationController
   def index
+    @current_user_groups = current_user.chat_groups.order('created_at DESC')
   end
 
   def new
@@ -7,13 +8,25 @@ class ChatGroupsController < ApplicationController
   end
 
   def create
-    ChatGroup.create(chat_group_params)
-    binding.pry
-    # add_user_id_to_relation_table(chat_group)
-    redirect_to action: :index
+    group = ChatGroup.new(chat_group_params)
+    if group.save
+      redirect_to chat_group_messages_url(group), notice: '新しいグループが作成されました'
+    else
+      redirect_to new_chat_group_url, alert: 'グループ作成に失敗しました。'
+    end
   end
 
   def edit
+    @group = get_params_id
+  end
+
+  def update
+    current_group = get_params_id
+    if current_group.update(chat_group_params)
+      redirect_to chat_group_messages_url(current_group), notice: 'グループを編集しました。'
+    else
+      redirect_to edit_chat_group_url(current_group), alert: 'グループ編集に失敗しました。'
+    end
   end
 
   private
@@ -21,17 +34,7 @@ class ChatGroupsController < ApplicationController
       params.require(:chat_group).permit(:name , user_ids: [])
     end
 
-  def add_user_id_to_relation_table(chat_group)
-     x = 1
-    next_while = true
-    while next_while do
-        if x <= chat_group_params[:user_ids].count-1
-          users = User.find(chat_group_params[:user_ids][x])
-          chat_group.users << users
-          x = x + 1
-        else
-          next_while = false
-        end
+    def get_params_id
+    ChatGroup.find(params[:id])
     end
-  end
 end

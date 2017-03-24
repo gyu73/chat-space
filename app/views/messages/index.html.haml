@@ -22,8 +22,7 @@
         %h3.contents__right__center__message__date 日付
         %h3.contents__right__center__message__text メッセージ内容
     .contents__right__bottom
-      .contents__right__bottom__input
-        .contents__right__bottom__input__message type a message
-        .contents__right__bottom__input__image
-          %i{ class: "fa fa-file-image-o"}
-      %h3.contents__right__bottom__send SEND
+
+      = form_for [@current_group, @message], html: { class: 'contents__right__bottom__form' } do |f|
+        = f.text_area :content, placeholder: 'type a message', class: '  contents__right__bottom__form__input', required: true
+        = f.submit 'SEND', class: 'contents__right__bottom__form__send'

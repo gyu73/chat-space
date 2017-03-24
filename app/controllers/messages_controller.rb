@@ -3,5 +3,6 @@ class MessagesController < ApplicationController
     @current_group = ChatGroup.find(params[:chat_group_id])
     @current_group_members = @current_group.users
     @current_user_groups = current_user.chat_groups.order('created_at DESC')
+    @message = Message.new
   end
 end

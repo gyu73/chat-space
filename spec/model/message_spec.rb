@@ -8,9 +8,9 @@ describe Message do
     end
 
     it "is invalid without a content" do
-      user = build(:message, content: nil)
-      user.valid?
-      expect(user.errors[:content]).to include("を入力してください。")
+      message = build(:message, content: nil)
+      message.valid?
+      expect(message.errors[:content]).to include("を入力してください。")
     end
   end
 end

@@ -1,4 +1,7 @@
 class MessagesController < ApplicationController
+
+before_action :authenticate_user!
+
   def index
     @current_group = ChatGroup.find(params[:chat_group_id])
     @current_group_members = @current_group.users

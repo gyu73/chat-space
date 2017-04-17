@@ -20,13 +20,11 @@ describe MessagesController do
     end
 
     it 'assigns the requested @current_group' do
-      current_group = build_current_group
-      expect(assigns(:current_group)).to eq current_group
+      expect(assigns(:current_group)).to eq build_current_group
     end
 
     it 'assigns the requested @current_group_members' do
-      current_group = build_current_group
-      current_group_members = current_group.users
+      current_group_members = build_current_group.users
       expect(assigns(:current_group_members)).to eq current_group_members
     end
 
@@ -37,8 +35,7 @@ describe MessagesController do
     end
 
     it 'assigns the requested @messages' do
-      current_group = build_current_group
-      messages = current_group.messages
+      messages = build_current_group.messages
       expect(assigns(:messages)).to match_array messages
     end
 

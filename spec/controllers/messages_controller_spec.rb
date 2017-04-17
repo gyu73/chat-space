@@ -20,7 +20,6 @@ describe MessagesController do
     end
 
     it 'assigns the requested @current_group' do
-      binding.pry
       current_group = build_current_group
       expect(assigns(:current_group)).to eq current_group
     end

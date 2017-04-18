@@ -10,7 +10,10 @@ class MessagesController < ApplicationController
   def create
     message = current_user.messages.new(message_params)
     if message.save
-      redirect_to chat_group_messages_url(message.chat_group_id), notice: 'メッセージを送信しました(あなたの思いが伝わりますように。)'
+      respond_to do |format|
+        format.html { redirect_to chat_group_messages_url(message.chat_group_id), notice: 'メッセージを送信しました(あなたの思いが伝わりますように。)' }
+        format.json { render json: message.json}
+      end
     else
       redirect_to chat_group_messages_url(message.chat_group_id), alert: 'メッセージの送信に失敗しました。(メッセージは225文字以下でお願いします。)'
     end

@@ -5,6 +5,6 @@ class Message < ApplicationRecord
     validates :content, presence: true, length: { maximum: 225 }
 
   def json
-    { user_nickname: user.nickname, created_at: created_at, content: content }
+    { user_nickname: user.nickname, created_at: created_at.strftime('%Y年%m月%d日 %H:%M:%S'), content: content }
   end
 end

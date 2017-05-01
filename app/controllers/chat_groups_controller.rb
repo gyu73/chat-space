@@ -18,6 +18,7 @@ class ChatGroupsController < ApplicationController
 
   def edit
     @group = get_params_id
+    @group_members = @group.users
   end
 
   def update

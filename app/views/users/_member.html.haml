@@ -1,0 +1,4 @@
+%p.chat-group-add-user__name
+  #{ member.nickname }
+  %input{ name: "chat_group[user_ids][]", type: "hidden", value: "#{member.id}" }
+  %a.chat-group-form__delete-btn 削除

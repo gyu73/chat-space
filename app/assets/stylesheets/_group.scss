@@ -55,6 +55,7 @@
     .chat-group-form__field--right {
       float: left;
       width: 70%;
+      @include clearfix();
     }
 
     .form__require{
@@ -71,10 +72,11 @@
 
     .chat-group-form__input {
       float: left;
-      width: 80%;
+      width: 100%;
       line-height: 30px;
       padding: 10px 15px;
       box-sizing: border-box;
+      @include clearfix();
     }
   }
 
@@ -87,6 +89,7 @@
 
     .chat-group-user__name {
       float: left;
+      @include clearfix();
     }
 
     .chat-group-user__btn {
@@ -105,10 +108,19 @@
   }
 
   .chat-group-form__action-btn {
+    float: right;
     display: inline-block;
     padding: 12px 20px;
     color: #fff;
     background-color: #38aef0;
     border: 0;
   }
+
+.chat-group-add-user__name {
+  @include clearfix();
+}
+
+.chat-group-form__delete-btn{
+  float:right;
+}
 }

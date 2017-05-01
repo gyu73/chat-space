@@ -18,7 +18,8 @@ class ChatGroupsController < ApplicationController
 
   def edit
     @group = get_params_id
-    @group_members = @group.users
+    @group_members = @group.users.where.not("nickname = '#{current_user.nickname}'")
+    binding.pry
   end
 
   def update

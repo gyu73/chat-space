@@ -19,6 +19,9 @@
       .chat-group-form__field--right
         #chat-group-users
           .chat-group-user
+            %p.chat-group-add-user__name
+              #{ current_user.nickname }
+              %input{ name: "chat_group[user_ids][]", type: "hidden", value: current_user.id }
             = render partial: 'users/member', collection: @group_members, as: :member
     .chat-group-form__field
       .chat-group-form__field--left

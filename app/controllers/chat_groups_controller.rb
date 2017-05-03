@@ -23,7 +23,6 @@ class ChatGroupsController < ApplicationController
 
   def update
     current_group = get_params_id
-    binding.pry
     if current_group.update(name: chat_group_params[:name], user_ids: chat_group_params[:new_user_ids])
       redirect_to chat_group_messages_url(current_group), notice: 'グループを編集しました。'
     else

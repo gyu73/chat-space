@@ -7,20 +7,21 @@
         = f.label :グループ名, class: 'chat-group-form__label', for: 'chat_group_name'
       .chat-group-form__field--right
         = f.text_area :name, placeholder: 'グループ名を入力してください。', class: ' chat-group-form__input', required: true
-        %p.form__require  ❇︎入力必須
     .chat-group-form__field
       .chat-group-form__field--left
         = f.label :チャットメンバーを追加, class: 'chat-group-form__label'
       .chat-group-form__field--right
-        = f.collection_check_boxes(:user_ids, User.all, :id, :nickname) do |b|
-          = b.label { b.check_box + b.text }
+        = text_field_tag :user_name,"", class: "chat-group-form__input",  id: 'user-search-field', placeholder: "Please input chat-member's name you want"
+        #user-search-result
     .chat-group-form__field
       .chat-group-form__field--left
         = f.label :チャットメンバー, class: 'chat-group-form__label'
       .chat-group-form__field--right
         #chat-group-users
-          .chat-group-user#chat-group-user-22
-            %p.chat-group-user__name seo_kyohei マイケル
+          .chat-group-user
+            %p.chat-group-add-user__name
+              #{ current_user.nickname }
+              %input{ name: "chat_group[user_ids][]", type: "hidden", value: current_user.id }
     .chat-group-form__field
       .chat-group-form__field--left
       .chat-group-form__field--right

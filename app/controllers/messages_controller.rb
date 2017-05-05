@@ -15,7 +15,7 @@ before_action :authenticate_user!
     if message.save
       respond_to do |format|
         format.html { redirect_to chat_group_messages_url(message.chat_group_id), notice: 'メッセージを送信しました(あなたの思いが伝わりますように。)' }
-        format.json { render json: message.json }
+        format.json { render json: message.json.merge(image: message.image.url) }
       end
     else
       redirect_to chat_group_messages_url(message.chat_group_id), alert: 'メッセージの送信に失敗しました。(メッセージは225文字以下でお願いします。)'
@@ -26,5 +26,5 @@ end
 private
 
 def message_params
-  params.require(:message).permit(:content, :chat_group_id)
+  params.require(:message).permit(:content, :image, :chat_group_id)
 end

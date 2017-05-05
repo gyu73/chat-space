@@ -28,6 +28,8 @@ html{
   height:100%;
   float: left;
   background-color: #2f3151;
+  @include clearfix();
+  overflow: auto;
 }
 
 .contents__left__top{
@@ -56,6 +58,8 @@ html{
   min-height: 500px;
   background-color: #2f3151;
   padding: 0 40px;
+  height: -webkit-calc(100% - 100px);
+  height: calc(100% - 100px);
 }
 
 .contents__left__bottom__group{
@@ -80,7 +84,6 @@ html{
   width: -webkit-calc(100% - 300px);
   width: calc(100% - 300px);
   height: 100%;
-  @include clearfix();
 }
 
 .contents__right__top{
@@ -123,11 +126,14 @@ html{
   height: calc(100% - 212px);
   padding: 0 40px;
   padding-bottom: 20px;
+  overflow: auto;
 }
 
 .contents__right__center__message{
   width: 100%;
   padding-top: 40px;
+  clear: left;
+  @include clearfix();
 
   &__name{
   margin-bottom: 10px;
@@ -148,6 +154,14 @@ html{
   font-size: 14px;
   color: #434A54;
 }
+&__image{
+  float: left;
+
+  img{
+    width: 500px;
+    height: 500px;
+  }
+}
 }
 
 .contents__right__bottom{
@@ -163,9 +177,9 @@ html{
   &__input{
   margin: 0 10px 0 20px;
   float: left;
-  min-width: -webkit-calc(100% - 100px);
+  min-width: -webkit-calc(100% - 80px);
   min-width: calc(100% - 100px);
-  max-width: -webkit-calc(100% - 100px);
+  max-width: -webkit-calc(100% - 80px);
   max-width: calc(100% - 100px);
   max-height: 40px;
   line-height: 40px;

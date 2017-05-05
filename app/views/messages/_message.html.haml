@@ -3,9 +3,9 @@
     = message.user.nickname
   %h3.contents__right__center__message__date
     = message.created_at
--if message.content?
-  %h3.contents__right__center__message__text
-    = message.content
--if message.image?
-  .contents__right__center__message__image
-    =image_tag message.image.url
+  -if message.content?
+    %h3.contents__right__center__message__text
+      = message.content
+  -if message.image?
+    .contents__right__center__message__image
+      =image_tag message.image.url

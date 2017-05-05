@@ -3,16 +3,19 @@ $(function() {
 
     var html =
       `<div class= contents__right__center__message>
-      <h3 class= contents__right__center__message__name>` +
-      chat_group.user_nickname +
-      `</h3>
-      <h3 class= contents__right__center__message__date>` +
-      chat_group.created_at +
-      `</h3>
-      <h3 class= contents__right__center__message__text>` +
-      chat_group.content +
-      `</h3>
-      </div>` ;
+          <h3 class= contents__right__center__message__name>
+          ${chat_group.user_nickname}
+          </h3>
+          <h3 class= contents__right__center__message__date>
+          ${chat_group.created_at}
+          </h3>
+          <h3 class= contents__right__center__message__text>
+          ${chat_group.content}
+          </h3>
+          <div class= contents__right__center__message__image>
+            <img src=${chat_group.image} >
+          </div>
+        </div>` ;
     return html;
   }
 

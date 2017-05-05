@@ -45,7 +45,6 @@ group :development, :test do
   gem 'devise'
   gem 'i18n'
   gem 'rails-controller-testing'
-
 end
 
 group :development do
@@ -53,12 +52,11 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'bullet'
-
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-
-
-
 end
 
 gem 'pry-rails'
+gem 'rmagick'
+gem 'carrierwave'
+gem 'fog'
+gem 'dotenv-rails'

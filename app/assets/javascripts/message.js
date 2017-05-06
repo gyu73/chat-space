@@ -64,7 +64,9 @@ $(function() {
     SendAjax();
   });
 
+if($(".contents").data("page") == "message_index"){
   setInterval(getNewMessages,10000);
+}
 
   function getNewMessages(){
     var LastMessageId = $(".contents__right__center__message:last-child").data("id");

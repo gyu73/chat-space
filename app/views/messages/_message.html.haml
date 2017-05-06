@@ -1,11 +1,10 @@
-.contents__right__center__message{data: {id: message.id}}
+.contents__right__center__message{ data: { id: message.id } }
   %h3.contents__right__center__message__name
     = message.user.nickname
   %h3.contents__right__center__message__date
-    = message.created_at.strftime('%Y年%m月%d日 %H:%M:%S')
+    = japan_time message.created_at
     %h3.contents__right__center__message__text
-      -if message.content?
-        = message.content
-  -if message.image?
+      = message.try(:content)
+  - if message.image?
     .contents__right__center__message__image
-      =image_tag message.image.url
+      = image_tag message.image.url

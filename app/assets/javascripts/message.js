@@ -2,15 +2,15 @@ $(function() {
   function buildHTML(chat_group) {
 
     var html =
-      `<div class= contents__right__center__message data-id=${chat_group.message_id}>
+      `<div class= contents__right__center__message data-id= ${chat_group.message_id}>
           <h3 class= contents__right__center__message__name>
-          ${chat_group.user_nickname}
+            ${chat_group.user_nickname}
           </h3>
           <h3 class= contents__right__center__message__date>
-          ${chat_group.created_at}
+            ${chat_group.created_at}
           </h3>
           <h3 class= contents__right__center__message__text>
-          ${chat_group.content}
+            ${chat_group.content}
           </h3>
           <div class= contents__right__center__message__image>
             <img src=${chat_group.image} >
@@ -24,22 +24,22 @@ $(function() {
     var html =
       `<div class= contents__right__center__message data-id=${message.id}>
           <h3 class= contents__right__center__message__name>
-          ${nickname}
+            ${nickname}
           </h3>
           <h3 class= contents__right__center__message__date>
-          ${message.created_at}
+            ${message.created_at}
           </h3>
           <h3 class= contents__right__center__message__text>
-          ${message.content}
+            ${message.content}
           </h3>
           <div class= contents__right__center__message__image>
-            <img src=${message.image.url} >
+            <img src= ${message.image.url}>
           </div>
         </div>` ;
     return html;
   }
 
-  function SendAjax(){
+  function SendAjax() {
     var text_data = new FormData($('#new_message').get(0));
     $.ajax({
       type: 'POST',
@@ -64,13 +64,13 @@ $(function() {
     SendAjax();
   });
 
-if($(".contents").data("page") == "message_index"){
-  setInterval(getNewMessages,10000);
+if($(".contents").data("page") == "message_index") {
+  setInterval(getNewMessages,60000);
 }
 
-  function getNewMessages(){
+  function getNewMessages() {
     var LastMessageId = $(".contents__right__center__message:last-child").data("id");
-    $.ajax({
+    $.ajax( {
       type: "GET",
       url: location.href,
       data: {
@@ -78,21 +78,18 @@ if($(".contents").data("page") == "message_index"){
       },
       dataType: "json"
     })
-    .done(function(data){
-      if(data.length != 0){
+    .done(function(data) {
+      if(data.length != 0) {
         var html = "";
-        $.each(data[1], function(index1, nickname){
-          $.each(data[0], function(index2, message){
+        $.each(data[1], function(index1, nickname) {
+          $.each(data[0], function(index2, message) {
             html += updateHTML(message, nickname);
           });
         });
         $('.contents__right__center').append(html);
       }
-      else{
-      }
     })
-    .fail(function(){
+    .fail(function() {
     });
   }
-
 });

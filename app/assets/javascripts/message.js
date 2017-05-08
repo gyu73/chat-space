@@ -1,18 +1,18 @@
 $(function() {
-  function buildHTML(chat_group) {
+  function buildHTML(message) {
     var html =
-      `<div class= contents__right__center__message data-id= ${chat_group.message_id}>
+      `<div class= contents__right__center__message data-id= ${message.message_id}>
           <h3 class= contents__right__center__message__name>
-            ${chat_group.user_nickname}
+            ${message.user_nickname}
           </h3>
           <h3 class= contents__right__center__message__date>
-            ${chat_group.created_at}
+            ${message.created_at}
           </h3>
           <h3 class= contents__right__center__message__text>
-            ${chat_group.content}
+            ${message.content}
           </h3>
           <div class= contents__right__center__message__image>
-            <img src=${chat_group.image} >
+            <img src=${message.image} >
           </div>
         </div>`;
     return html;

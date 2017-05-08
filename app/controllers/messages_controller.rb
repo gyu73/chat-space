@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 
-before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @current_group = ChatGroup.find(params[:chat_group_id])
@@ -38,8 +38,7 @@ before_action :authenticate_user!
 
   def get_update_user_nicknames
     update_users = []
-    update_messages = ChatGroup.find(params[:chat_group_id]).messages.where("id > ?", params[:currentMessageId])
-      update_messages.each do |message|
+      get_update_messages.each do |message|
         update_users << User.find(message[:user_id]).nickname
       end
     return update_users
@@ -47,7 +46,7 @@ before_action :authenticate_user!
 
   def get_create_json(get_update_messages, get_update_user_nicknames)
     messages_and_nicknames = []
-    messages_and_nicknames = messages_and_nicknames.push(get_update_messages)
-    messages_and_nicknames = messages_and_nicknames.push(get_update_user_nicknames)
-end
+    messages_and_nicknames = messages_and_nicknames << get_update_messages
+    messages_and_nicknames = messages_and_nicknames << get_update_user_nicknames
+  end
 end

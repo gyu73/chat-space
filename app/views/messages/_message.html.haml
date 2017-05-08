@@ -2,7 +2,7 @@
   %h3.contents__right__center__message__name
     = message.user.nickname
   %h3.contents__right__center__message__date
-    = japan_time message.created_at
+    = current_date_in_Japanese message.created_at
     %h3.contents__right__center__message__text
       = message.try(:content)
   - if message.image?

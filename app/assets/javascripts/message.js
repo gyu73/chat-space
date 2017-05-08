@@ -14,7 +14,7 @@ $(function() {
           <div class= contents__right__center__message__image>
             <img src=${chat_group.image} >
           </div>
-        </div>` ;
+        </div>`;
     return html;
   }
 
@@ -33,7 +33,7 @@ $(function() {
           <div class= contents__right__center__message__image>
             <img src= ${message.image.url}>
           </div>
-        </div>` ;
+        </div>`;
     return html;
   }
  //メッセージの非同期通信のためのメソッド
@@ -62,20 +62,20 @@ $(function() {
   });
   //自動更新のメソッド
   function getNewMessages() {
-    var current_chat_group_id = $(".contents").data("chat-group-id");
+    var current_chat_group_id = $('.contents').data('chat-group-id');
     if(location.pathname == `/chat_groups/${current_chat_group_id}/messages`) {
       var LastMessageId = $(".contents__right__center__message:last-child").data("id");
       $.ajax( {
-        type: "GET",
+        type: 'GET',
         url: location.href,
         data: {
           LastMessageId: LastMessageId
         },
-        dataType: "json"
+        dataType: 'json'
       })
       .done(function(data) {
         if(data.length != 0) {
-          var html = "";
+          var html = '';
           $.each(data[1], function(index1, nickname) {
             $.each(data[0], function(index2, message) {
               html += updateHTML(message, nickname);
@@ -90,7 +90,7 @@ $(function() {
     }
   }
   //自動更新のための記述
-  var current_chat_group_id = $(".contents").data("chat-group-id");
+  var current_chat_group_id = $('.contents').data('chat-group-id');
   if(location.pathname == `/chat_groups/${current_chat_group_id}/messages`) {
     var timer = setInterval(getNewMessages, 5000);
   }

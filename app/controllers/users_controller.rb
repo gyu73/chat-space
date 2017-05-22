@@ -6,10 +6,10 @@ class UsersController < ApplicationController
         format.json{ render json: users }
       end
     end
-  end
 
 private
 
 def user_name_params
   params.require(:user_name).permit(:keyword)
+end
 end

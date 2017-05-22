@@ -46,7 +46,6 @@ group :development, :test do
   gem 'haml-rails'
   gem 'erb2haml'
   gem 'font-awesome-sass'
-  gem 'devise'
   gem 'i18n'
   gem 'rails-controller-testing'
 end
@@ -60,6 +59,7 @@ group :development do
 end
 
 gem 'pry-rails'
+gem 'devise'
 gem 'rmagick'
 gem 'carrierwave'
 gem 'fog'

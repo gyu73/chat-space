@@ -27,7 +27,7 @@ html{
   width: 300px;
   height:100%;
   float: left;
-  background-color: #2f3151;
+  background-color: #2f3e51;
   @include clearfix();
   overflow: auto;
 }
@@ -52,11 +52,15 @@ html{
   text-align: right;
   line-height: 100px;
 }
+
+  a{
+    color: white;
+  }
 }
 
 .contents__left__bottom{
   min-height: 500px;
-  background-color: #2f3151;
+  background-color: #2f3e51;
   padding: 0 40px;
   height: -webkit-calc(100% - 100px);
   height: calc(100% - 100px);

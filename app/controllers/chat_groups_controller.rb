@@ -1,6 +1,7 @@
 class ChatGroupsController < ApplicationController
+
   def index
-    @current_user_groups = current_user.chat_groups.order('created_at DESC')
+    @current_user_groups = current_user.chat_groups.order('created_at DESC').includes(:user_chat_groups).includes(:users)
   end
 
   def new

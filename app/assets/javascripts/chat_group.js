@@ -4,20 +4,22 @@ $(function() {
   function buildHtmluser(user){
     var user_nickname = user.nickname;
     var user_id = user.id;
-    var html =  `<li class = "chat-group-form__result">
-                      ${user_nickname}
-                      <a id ="add_button" type = "button" data-user-name = ${user_nickname} data-user-id =${user_id}> 追加
-                      </a>
-                      </li>`;
+    var html =  '<li class = "chat-group-form__result">' +
+                      user_nickname +
+                      '<a id ="add_button" type = "button" data-user-name="' + user_nickname + '"data-user-id=' + user_id +'>' + '追加' +
+                      '</a>' +
+                      '</li>';
     $('#user-search-result').append(html);
   }
 
 // 追加したユーザーを表示するメソッド
   function addHtmluser(name, id){
-    var html =  `<p class = "chat-group-add-user__name"> ${name}
-                      <input name = "chat_group[user_ids][]" type = "hidden", value = '${id}'>
-                      <a class = "chat-group-form__delete-btn" data-user-id = ${id}> 削除 </a>
-                      </p>`;
+    var html =   '<p class = "chat-group-add-user__name">' +
+                       name +
+                      '<input name = "chat_group[user_ids][]" type = "hidden", value =' + id + ' >' +
+                      '<a class = "chat-group-form__delete-btn" data-user-id ='+ id +'>' + '削除' +
+                      '</a>' +
+                      '</p>';
     $('.chat-group-user').append(html);
   }
 

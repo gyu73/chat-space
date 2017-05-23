@@ -43,10 +43,6 @@ group :development, :test do
   gem 'rspec-rails', "~> 3.1.0"
   gem 'factory_girl_rails', "~> 4.4.1"
   gem 'faker'
-  gem 'haml-rails'
-  gem 'erb2haml'
-  gem 'font-awesome-sass'
-  gem 'i18n'
   gem 'rails-controller-testing'
 end
 
@@ -65,3 +61,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'dotenv-rails'
 gem 'config'
+gem 'haml-rails'
+gem 'erb2haml'
+gem 'font-awesome-sass'
+gem 'i18n'

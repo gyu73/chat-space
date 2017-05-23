@@ -63,7 +63,7 @@ $(function() {
   //自動更新のメソッド
   function getNewMessages() {
     var current_chat_group_id = $('.contents').data('chat-group-id');
-    if(location.pathname == `/chat_groups/${current_chat_group_id}/messages`) {
+    if(location.pathname == '/chat_groups/'+current_chat_group_id +'/messages') {
       var LastMessageId = $(".contents__right__center__message:last-child").data("id");
       $.ajax( {
         type: 'GET',
@@ -91,7 +91,7 @@ $(function() {
   }
   //自動更新のための記述
   var current_chat_group_id = $('.contents').data('chat-group-id');
-  if(location.pathname == `/chat_groups/${current_chat_group_id}/messages`) {
+  if(location.pathname == '/chat_groups/' +current_chat_group_id +'/messages') {
     var timer = setInterval(getNewMessages, 5000);
   }
   else {
